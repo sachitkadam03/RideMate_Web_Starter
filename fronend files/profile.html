@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RideMate — Profile</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+         ===================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         GLOBAL NAVBAR CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="./css/navbar.css"
+    >
+
+
+    <!-- =====================================================
+         PROFILE CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="./css/profile.css?v=1"
+    >
+
+</head>
+
+
+<body>
+
+<div class="profile-page">
+
+
+    <!-- =====================================================
+         GLOBAL NAVBAR
+         ===================================================== -->
+
+    <header class="site-nav">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="dashboard.html"
+            class="site-logo"
+        >
+
+            <span class="site-logo-mark">
+                R
+            </span>
+
+            <span class="site-logo-text">
+                RIDE<span>MATE</span>
+            </span>
+
+        </a>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="site-nav-links">
+
+
+            <a
+                href="dashboard.html"
+                data-nav="home"
+            >
+                Home
+            </a>
+
+
+            <a
+                href="explore.html"
+                data-nav="explore"
+            >
+                Explore
+            </a>
+
+
+            <a
+                href="planner.html"
+                data-nav="planner"
+            >
+                Plan a Ride
+            </a>
+
+
+            <a
+                href="ai.html"
+                data-nav="ai"
+            >
+                RideMate AI
+            </a>
+
+
+            <a
+                href="trip.html"
+                data-nav="trip"
+            >
+                My Ride
+            </a>
+
+
+            <a
+                href="profile.html"
+                data-nav="profile"
+            >
+                Profile
+            </a>
+
+
+        </nav>
+
+
+
+        <!-- PLAN A RIDE -->
+
+        <a
+            href="planner.html"
+            class="site-plan-button"
+        >
+
+            Plan a Ride
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="site-menu-button"
+            id="siteMenuButton"
+            type="button"
+            aria-label="Open navigation menu"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="profile-main">
+
+
+        <!-- =================================================
+             PROFILE HEADER
+             ================================================= -->
+
+        <section class="profile-header">
+
+
+            <div class="profile-eyebrow">
+                RIDEMATE PROFILE
+            </div>
+
+
+            <h1>
+                Your rider
+                <span>profile.</span>
+            </h1>
+
+
+            <p>
+                Manage your rider information, motorcycle,
+                preferences and RideMate settings from one place.
+            </p>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROFILE GRID
+             ================================================= -->
+
+        <section class="profile-grid">
+
+
+            <!-- =================================================
+                 PERSONAL INFORMATION
+                 ================================================= -->
+
+            <div class="profile-card profile-user-card">
+
+
+                <div class="profile-card-heading">
+
+
+                    <div>
+
+                        <span>
+                            RIDER
+                        </span>
+
+                        <h2>
+                            Personal Information
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="editProfile"
+                    >
+                        Edit
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- USER HEADER -->
+
+                <div class="profile-user-summary">
+
+
+                    <div
+                        class="profile-avatar"
+                        id="profileInitial"
+                    >
+                        S
+                    </div>
+
+
+                    <div class="profile-user-info">
+
+                        <h3 id="profileName">
+                            Rider
+                        </h3>
+
+                        <p id="profileEmail">
+                            rider@ridemate.com
+                        </p>
+
+
+                        <span class="rider-badge">
+                            RIDEMATE RIDER
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- USER DETAILS -->
+
+                <div class="profile-details-grid">
+
+
+                    <div class="profile-detail">
+
+                        <span>
+                            FULL NAME
+                        </span>
+
+                        <strong id="detailName">
+                            Rider
+                        </strong>
+
+                    </div>
+
+
+                    <div class="profile-detail">
+
+                        <span>
+                            EMAIL
+                        </span>
+
+                        <strong id="detailEmail">
+                            rider@ridemate.com
+                        </strong>
+
+                    </div>
+
+
+                    <div class="profile-detail">
+
+                        <span>
+                            PHONE
+                        </span>
+
+                        <strong id="detailPhone">
+                            Not added
+                        </strong>
+
+                    </div>
+
+
+                    <div class="profile-detail">
+
+                        <span>
+                            HOME CITY
+                        </span>
+
+                        <strong id="detailCity">
+                            Not added
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MOTORCYCLE
+                 ================================================= -->
+
+            <div class="profile-card bike-profile-card">
+
+
+                <div class="profile-card-heading">
+
+
+                    <div>
+
+                        <span>
+                            YOUR MACHINE
+                        </span>
+
+                        <h2>
+                            Motorcycle
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="editBike"
+                    >
+                        Edit
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- BIKE SUMMARY -->
+
+                <div class="profile-bike-summary">
+
+
+                    <div class="profile-bike-icon">
+                        RIDE
+                    </div>
+
+
+                    <div class="profile-bike-info">
+
+                        <span>
+                            CURRENT BIKE
+                        </span>
+
+                        <h3 id="bikeName">
+                            Your Bike
+                        </h3>
+
+                        <p id="bikeModel">
+                            Not configured
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- BIKE STATS -->
+
+                <div class="profile-bike-stats">
+
+
+                    <div>
+
+                        <span>
+                            AVERAGE
+                        </span>
+
+                        <strong id="bikeAverage">
+                            0 km/l
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            RIDES
+                        </span>
+
+                        <strong id="bikeRides">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            DISTANCE
+                        </span>
+
+                        <strong id="bikeDistance">
+                            0 km
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RIDING PREFERENCES
+                 ================================================= -->
+
+            <div class="profile-card preferences-card">
+
+
+                <div class="profile-card-heading">
+
+
+                    <div>
+
+                        <span>
+                            RIDING STYLE
+                        </span>
+
+                        <h2>
+                            Preferences
+                        </h2>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="preferences-list">
+
+
+                    <div
+                        class="preference-item"
+                        data-preference="mountains"
+                    >
+
+                        <div class="preference-icon">
+                            M
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Mountains
+                            </strong>
+
+                            <span>
+                                Himalayan and hill roads
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        class="preference-item"
+                        data-preference="beaches"
+                    >
+
+                        <div class="preference-icon">
+                            B
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Beaches
+                            </strong>
+
+                            <span>
+                                Coastal routes and beaches
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        class="preference-item"
+                        data-preference="waterfalls"
+                    >
+
+                        <div class="preference-icon">
+                            W
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Waterfalls
+                            </strong>
+
+                            <span>
+                                Scenic waterfall routes
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        class="preference-item"
+                        data-preference="adventure"
+                    >
+
+                        <div class="preference-icon">
+                            A
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Adventure
+                            </strong>
+
+                            <span>
+                                Challenging roads and experiences
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        class="preference-item"
+                        data-preference="food"
+                    >
+
+                        <div class="preference-icon">
+                            F
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Food
+                            </strong>
+
+                            <span>
+                                Local food and hidden places
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        class="preference-item"
+                        data-preference="culture"
+                    >
+
+                        <div class="preference-icon">
+                            C
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Culture
+                            </strong>
+
+                            <span>
+                                Heritage and local culture
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STATISTICS
+                 ================================================= -->
+
+            <div class="profile-card statistics-card">
+
+
+                <div class="profile-card-heading">
+
+
+                    <div>
+
+                        <span>
+                            YOUR JOURNEY
+                        </span>
+
+                        <h2>
+                            Ride Statistics
+                        </h2>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="profile-stat-grid">
+
+
+                    <div class="profile-stat">
+
+                        <span>
+                            TOTAL RIDES
+                        </span>
+
+                        <strong id="statRides">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="profile-stat">
+
+                        <span>
+                            DISTANCE
+                        </span>
+
+                        <strong id="statDistance">
+                            0 km
+                        </strong>
+
+                    </div>
+
+
+                    <div class="profile-stat">
+
+                        <span>
+                            TOTAL BUDGET
+                        </span>
+
+                        <strong id="statBudget">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="profile-stat">
+
+                        <span>
+                            FAVOURITE
+                        </span>
+
+                        <strong id="statFavourite">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- JOURNEY PROGRESS -->
+
+                <div class="journey-progress">
+
+
+                    <div class="journey-progress-header">
+
+                        <span>
+                            RIDEMATE JOURNEY
+                        </span>
+
+                        <strong id="journeyPercent">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-track">
+
+                        <div
+                            class="progress-fill"
+                            id="journeyProgress"
+                        ></div>
+
+                    </div>
+
+
+                    <p>
+                        Keep planning new rides to build
+                        your RideMate journey.
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SETTINGS
+                 ================================================= -->
+
+            <div class="profile-card settings-card">
+
+
+                <div class="profile-card-heading">
+
+
+                    <div>
+
+                        <span>
+                            ACCOUNT
+                        </span>
+
+                        <h2>
+                            Settings
+                        </h2>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- NOTIFICATIONS -->
+
+                <div class="setting-row">
+
+
+                    <div>
+
+                        <strong>
+                            Notifications
+                        </strong>
+
+                        <span id="notificationsSetting">
+                            Ride updates and reminders
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="setting-toggle"
+                        id="notificationToggle"
+                        aria-label="Toggle notifications"
+                    >
+
+                        <span></span>
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- LOCATION -->
+
+                <div class="setting-row">
+
+
+                    <div>
+
+                        <strong>
+                            Location Services
+                        </strong>
+
+                        <span id="locationSetting">
+                            Allow location-based features
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="setting-toggle"
+                        id="locationToggle"
+                        aria-label="Toggle location services"
+                    >
+
+                        <span></span>
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- CLEAR DATA -->
+
+                <div class="setting-row danger-setting">
+
+
+                    <div>
+
+                        <strong>
+                            Clear RideMate Data
+                        </strong>
+
+                        <span>
+                            Remove locally stored RideMate data
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="clearData"
+                    >
+                        Clear
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 LOGOUT
+                 ================================================= -->
+
+            <div class="profile-card logout-card">
+
+
+                <div>
+
+                    <span class="logout-label">
+                        SESSION
+                    </span>
+
+                    <h2>
+                        Ready to leave?
+                    </h2>
+
+                    <p>
+                        You can sign back in anytime to
+                        continue your journeys.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="logoutButton"
+                >
+                    Logout
+                    <strong>→</strong>
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             BOTTOM CTA
+             ================================================= -->
+
+        <section class="profile-bottom-cta">
+
+
+            <div>
+
+                <span>
+                    YOUR NEXT JOURNEY
+                </span>
+
+                <h2>
+                    The road is waiting.
+                </h2>
+
+                <p>
+                    Choose a destination and let RideMate
+                    build your next motorcycle journey.
+                </p>
+
+            </div>
+
+
+            <a
+                href="planner.html"
+                class="profile-cta-button"
+            >
+                Plan a Ride
+                <span>→</span>
+            </a>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="profile-footer">
+
+
+        <div class="footer-logo">
+            RIDE<span>MATE</span>
+        </div>
+
+
+        <p>
+            Plan better. Ride farther.
+        </p>
+
+
+        <span>
+            © 2026 RideMate
+        </span>
+
+
+    </footer>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script src="./js/profile.js?v=1"></script>
+
+<script src="./js/app.js"></script>
+
+
+</body>
+
+</html>

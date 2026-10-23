@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plan a Ride | RideMate</title>
+
+    <link rel="stylesheet" href="./css/style.css?v=4">
+    <link rel="stylesheet" href="./css/planner.css?v=4">
+</head>
+
+<body class="planner-page">
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="planner-nav">
+
+    <a href="dashboard.html" class="planner-logo">
+        <span class="logo-mark">R</span>
+        <span>RIDE<span>MATE</span></span>
+    </a>
+
+    <!-- STEP INDICATOR -->
+
+    <div class="planner-steps">
+
+        <div class="planner-step active" data-step-indicator="1">
+            <span class="step-number">01</span>
+            <span class="step-label">ROUTE</span>
+        </div>
+
+        <div class="step-connector"></div>
+
+        <div class="planner-step" data-step-indicator="2">
+            <span class="step-number">02</span>
+            <span class="step-label">PREFERENCES</span>
+        </div>
+
+        <div class="step-connector"></div>
+
+        <div class="planner-step" data-step-indicator="3">
+            <span class="step-number">03</span>
+            <span class="step-label">REVIEW</span>
+        </div>
+
+    </div>
+
+    <a href="dashboard.html" class="planner-close" title="Close planner">
+        ×
+    </a>
+
+</header>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="planner-main">
+
+    <!-- =====================================================
+         LEFT SIDE
+    ====================================================== -->
+
+    <section class="planner-intro">
+
+        <div class="planner-intro-content">
+
+            <div class="planner-eyebrow">
+                RIDEMATE TRIP PLANNER
+            </div>
+
+            <h1>
+                Build a ride
+                <span>worth remembering.</span>
+            </h1>
+
+            <p>
+                Tell us where you're starting, where you want to go
+                and what kind of experience you're looking for.
+            </p>
+
+        </div>
+
+
+        <!-- ROUTE VISUAL -->
+
+        <div class="planner-route-visual">
+
+            <div class="route-grid"></div>
+
+            <div class="route-path"></div>
+
+            <div class="route-node route-start-node">
+                <span></span>
+                <small>START</small>
+            </div>
+
+            <div class="route-node route-destination-node">
+                <span></span>
+                <small>DESTINATION</small>
+            </div>
+
+            <div class="route-distance">
+                <strong>PLAN YOUR ROAD</strong>
+                <span>YOUR JOURNEY · YOUR WAY</span>
+            </div>
+
+        </div>
+
+
+        <div class="planner-intro-note">
+
+            <span class="note-dot"></span>
+
+            <div>
+                <strong>RideMate plans around you.</strong>
+                <p>
+                    Your interests, budget and places you want to
+                    visit become part of your ride.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         RIGHT SIDE
+    ====================================================== -->
+
+    <section class="planner-form-area">
+
+        <form id="plannerForm" class="planner-form" novalidate>
+
+
+            <!-- =================================================
+                 STEP 01 — ROUTE
+            ================================================== -->
+
+            <div
+                class="planner-panel planner-step-panel active"
+                data-step="1"
+                id="stepRoute">
+
+                <div class="panel-kicker">
+                    STEP 01
+                </div>
+
+                <h2>
+                    Where are you riding?
+                </h2>
+
+                <p class="panel-description">
+                    Start with the basics of your journey.
+                </p>
+
+
+                <!-- START -->
+
+                <div class="planner-field">
+
+                    <label for="startLocation">
+                        STARTING LOCATION
+                    </label>
+
+                    <div class="planner-input location-input">
+
+                        <span class="field-dot start-dot"></span>
+
+                        <input
+                            type="text"
+                            id="startLocation"
+                            name="startLocation"
+                            placeholder="e.g. Pune"
+                            autocomplete="off"
+                        >
+
+                        <button
+                            type="button"
+                            class="location-button"
+                            id="useLocationButton"
+                            title="Use my location">
+
+                            ⌖
+
+                        </button>
+
+                    </div>
+
+                    <div
+                        class="field-error"
+                        id="startLocationError">
+                    </div>
+
+                </div>
+
+
+                <!-- DESTINATION -->
+
+                <div class="planner-field">
+
+                    <label for="destination">
+                        DESTINATION
+                    </label>
+
+                    <div class="planner-input location-input">
+
+                        <span class="field-dot destination-dot"></span>
+
+                        <input
+                            type="text"
+                            id="destination"
+                            name="destination"
+                            placeholder="Where do you want to go?"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                    <div
+                        class="field-error"
+                        id="destinationError">
+                    </div>
+
+                </div>
+
+
+                <!-- DATE + DAYS -->
+
+                <div class="field-row">
+
+                    <div class="planner-field">
+
+                        <label for="travelDate">
+                            TRAVEL DATE
+                        </label>
+
+                        <div class="planner-input">
+
+                            <span class="input-symbol">◷</span>
+
+                            <input
+                                type="date"
+                                id="travelDate"
+                                name="travelDate"
+                            >
+
+                        </div>
+
+                        <div
+                            class="field-error"
+                            id="travelDateError">
+                        </div>
+
+                    </div>
+
+
+                    <div class="planner-field">
+
+                        <label for="days">
+                            DAYS
+                        </label>
+
+                        <div class="planner-input">
+
+                            <span class="input-symbol">▣</span>
+
+                            <input
+                                type="number"
+                                id="days"
+                                name="days"
+                                min="1"
+                                max="30"
+                                value="5"
+                            >
+
+                        </div>
+
+                        <div
+                            class="field-error"
+                            id="daysError">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIDERS -->
+
+                <div class="planner-field">
+
+                    <label>
+                        NUMBER OF RIDERS
+                    </label>
+
+                    <div class="rider-selector">
+
+                        <button
+                            type="button"
+                            id="decreaseRiders"
+                            class="rider-button">
+
+                            −
+
+                        </button>
+
+                        <span id="riderCount">1</span>
+
+                        <button
+                            type="button"
+                            id="increaseRiders"
+                            class="rider-button">
+
+                            +
+
+                        </button>
+
+                    </div>
+
+                    <input
+                        type="hidden"
+                        id="riders"
+                        name="riders"
+                        value="1"
+                    >
+
+                </div>
+
+
+                <!-- BIKE -->
+
+                <div class="planner-field">
+
+                    <label for="bike">
+                        YOUR BIKE
+                    </label>
+
+                    <div class="planner-input">
+
+                        <span class="input-symbol">◉</span>
+
+                        <select id="bike" name="bike">
+
+                            <option value="">
+                                Select your bike
+                            </option>
+
+                            <option value="Royal Enfield Classic 350">
+                                Royal Enfield Classic 350
+                            </option>
+
+                            <option value="Royal Enfield Himalayan">
+                                Royal Enfield Himalayan
+                            </option>
+
+                            <option value="Royal Enfield Hunter 350">
+                                Royal Enfield Hunter 350
+                            </option>
+
+                            <option value="Yamaha MT-15">
+                                Yamaha MT-15
+                            </option>
+
+                            <option value="Yamaha R15">
+                                Yamaha R15
+                            </option>
+
+                            <option value="KTM Duke 390">
+                                KTM Duke 390
+                            </option>
+
+                            <option value="KTM Adventure 390">
+                                KTM Adventure 390
+                            </option>
+
+                            <option value="Honda CB350">
+                                Honda CB350
+                            </option>
+
+                            <option value="Bajaj Dominar 400">
+                                Bajaj Dominar 400
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div
+                        class="field-error"
+                        id="bikeError">
+                    </div>
+
+                </div>
+
+
+                <!-- NEXT -->
+
+                <div class="step-actions">
+
+                    <button
+                        type="button"
+                        class="planner-primary-button"
+                        id="routeNextButton">
+
+                        <span>CONTINUE TO PREFERENCES</span>
+
+                        <strong>→</strong>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 STEP 02 — PREFERENCES
+            ================================================== -->
+
+            <div
+                class="planner-panel planner-step-panel"
+                data-step="2"
+                id="stepPreferences">
+
+                <div class="panel-kicker">
+                    STEP 02
+                </div>
+
+                <h2>
+                    What kind of ride do you want?
+                </h2>
+
+                <p class="panel-description">
+                    Choose what you want RideMate to prioritize.
+                </p>
+
+
+                <!-- INTERESTS -->
+
+                <div class="planner-field">
+
+                    <label>
+                        YOUR INTERESTS
+                    </label>
+
+                    <div class="preference-grid">
+
+                        <button
+                            type="button"
+                            class="preference-chip"
+                            data-preference="mountains">
+
+                            <span>⌁</span>
+                            Mountains
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="preference-chip"
+                            data-preference="beaches">
+
+                            <span>≈</span>
+                            Beaches
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="preference-chip"
+                            data-preference="waterfalls">
+
+                            <span>↓</span>
+                            Waterfalls
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="preference-chip"
+                            data-preference="adventure">
+
+                            <span>◇</span>
+                            Adventure
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="preference-chip"
+                            data-preference="food">
+
+                            <span>+</span>
+                            Food
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="preference-chip"
+                            data-preference="culture">
+
+                            <span>○</span>
+                            Culture
+
+                        </button>
+
+                    </div>
+
+                    <input
+                        type="hidden"
+                        id="preferences"
+                        name="preferences"
+                    >
+
+                </div>
+
+
+                <!-- SPECIFIC PLACES -->
+
+                <div class="planner-field">
+
+                    <label for="requestedPlaces">
+                        PLACES YOU SPECIFICALLY WANT TO VISIT
+                    </label>
+
+                    <textarea
+                        id="requestedPlaces"
+                        name="requestedPlaces"
+                        rows="4"
+                        placeholder="e.g. Dudhsagar Falls, Fort Aguada, Baga Beach..."
+                    ></textarea>
+
+                    <small class="field-helper">
+                        Separate multiple places with commas.
+                    </small>
+
+                </div>
+
+
+                <!-- BUDGET -->
+
+                <div class="planner-field">
+
+                    <div class="budget-heading">
+
+                        <label for="budget">
+                            TRIP BUDGET
+                        </label>
+
+                        <strong id="budgetValue">
+                            ₹20,000
+                        </strong>
+
+                    </div>
+
+                    <input
+                        type="range"
+                        id="budget"
+                        name="budget"
+                        min="5000"
+                        max="200000"
+                        step="1000"
+                        value="20000"
+                    >
+
+                    <div class="budget-range">
+
+                        <span>₹5,000</span>
+                        <span>₹2,00,000</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACTIONS -->
+
+                <div class="step-actions two-buttons">
+
+                    <button
+                        type="button"
+                        class="planner-secondary-button"
+                        id="preferencesBackButton">
+
+                        ← BACK
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="planner-primary-button"
+                        id="preferencesNextButton">
+
+                        <span>REVIEW MY RIDE</span>
+
+                        <strong>→</strong>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 STEP 03 — REVIEW
+            ================================================== -->
+
+            <div
+                class="planner-panel planner-step-panel"
+                data-step="3"
+                id="stepReview">
+
+                <div class="panel-kicker">
+                    STEP 03
+                </div>
+
+                <h2>
+                    Review your ride.
+                </h2>
+
+                <p class="panel-description">
+                    Check everything before RideMate builds your trip.
+                </p>
+
+
+                <!-- ROUTE SUMMARY -->
+
+                <div class="review-route">
+
+                    <div class="review-location">
+
+                        <span class="review-dot start-review-dot"></span>
+
+                        <div>
+                            <small>START</small>
+                            <strong id="reviewStart">
+                                —
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="review-route-line"></div>
+
+
+                    <div class="review-location">
+
+                        <span class="review-dot destination-review-dot"></span>
+
+                        <div>
+                            <small>DESTINATION</small>
+                            <strong id="reviewDestination">
+                                —
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TRIP STATS -->
+
+                <div class="review-stats">
+
+                    <div class="review-stat">
+
+                        <span>DATE</span>
+                        <strong id="reviewDate">—</strong>
+
+                    </div>
+
+                    <div class="review-stat">
+
+                        <span>DURATION</span>
+                        <strong id="reviewDays">—</strong>
+
+                    </div>
+
+                    <div class="review-stat">
+
+                        <span>RIDERS</span>
+                        <strong id="reviewRiders">—</strong>
+
+                    </div>
+
+                    <div class="review-stat">
+
+                        <span>BUDGET</span>
+                        <strong id="reviewBudget">—</strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BIKE -->
+
+                <div class="review-section">
+
+                    <div class="review-section-heading">
+                        YOUR BIKE
+                    </div>
+
+                    <div class="review-bike" id="reviewBike">
+                        —
+                    </div>
+
+                </div>
+
+
+                <!-- PREFERENCES -->
+
+                <div class="review-section">
+
+                    <div class="review-section-heading">
+                        INTERESTS
+                    </div>
+
+                    <div
+                        class="review-tags"
+                        id="reviewPreferences">
+
+                        <span class="review-empty">
+                            No preferences selected
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REQUESTED PLACES -->
+
+                <div class="review-section">
+
+                    <div class="review-section-heading">
+                        PLACES TO INCLUDE
+                    </div>
+
+                    <div
+                        class="review-requested-places"
+                        id="reviewRequestedPlaces">
+
+                        No specific places added.
+
+                    </div>
+
+                </div>
+
+
+                <!-- AI NOTE -->
+
+                <div class="planner-ai-note">
+
+                    <div class="ai-note-icon">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            RideMate will build your itinerary
+                        </strong>
+
+                        <p>
+                            Your preferences and requested places
+                            will be used to shape the suggested route.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACTIONS -->
+
+                <div class="step-actions two-buttons">
+
+                    <button
+                        type="button"
+                        class="planner-secondary-button"
+                        id="reviewBackButton">
+
+                        ← BACK
+
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="planner-primary-button"
+                        id="generateRideButton">
+
+                        <span>GENERATE MY RIDE</span>
+
+                        <strong>→</strong>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     SCRIPT
+========================================================= -->
+
+<script src="./js/planner.js?v=5"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>

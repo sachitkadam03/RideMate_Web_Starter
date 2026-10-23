@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RideMate AI — Your Ride Planner</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- AI CSS -->
+
+    <link
+        rel="stylesheet"
+        href="./css/ai.css?v=1"
+    >
+
+</head>
+
+
+<body>
+
+<div class="ai-page">
+
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <header class="ai-nav">
+
+        <a
+            href="index.html"
+            class="ai-logo"
+        >
+            RIDE<span>MATE</span>
+        </a>
+
+
+        <nav class="ai-nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="explore.html">
+                Explore
+            </a>
+
+            <a href="planner.html">
+                Plan a Ride
+            </a>
+
+            <a
+                href="ai.html"
+                class="active"
+            >
+                RideMate AI
+            </a>
+
+            <a href="trip.html">
+                My Ride
+            </a>
+
+        </nav>
+
+
+        <a
+            href="planner.html"
+            class="ai-plan-btn"
+        >
+            Plan a Ride
+        </a>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="ai-main">
+
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
+        <section class="ai-hero">
+
+            <div class="ai-hero-content">
+
+                <div class="ai-eyebrow">
+                    RIDEMATE INTELLIGENCE
+                </div>
+
+
+                <h1>
+                    Tell us where you want
+                    <span>to ride.</span>
+                </h1>
+
+
+                <p>
+                    Describe your dream motorcycle journey.
+                    RideMate AI can turn your destination,
+                    budget, days and interests into a structured
+                    ride plan.
+                </p>
+
+
+                <div class="ai-capabilities">
+
+                    <span>
+                        Route planning
+                    </span>
+
+                    <span>
+                        Budget estimation
+                    </span>
+
+                    <span>
+                        Places to visit
+                    </span>
+
+                    <span>
+                        Day-wise itinerary
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI VISUAL -->
+
+            <div class="ai-visual">
+
+                <div class="ai-orbit orbit-one"></div>
+
+                <div class="ai-orbit orbit-two"></div>
+
+                <div class="ai-orbit orbit-three"></div>
+
+
+                <div class="ai-core">
+
+                    <div class="ai-core-inner">
+                        AI
+                    </div>
+
+                </div>
+
+
+                <span class="ai-node node-one"></span>
+                <span class="ai-node node-two"></span>
+                <span class="ai-node node-three"></span>
+                <span class="ai-node node-four"></span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             AI WORKSPACE
+             ================================================= -->
+
+        <section class="ai-workspace">
+
+
+            <!-- =================================================
+                 CHAT / INPUT AREA
+                 ================================================= -->
+
+            <div class="ai-chat-panel">
+
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-kicker">
+                            RIDEMATE AI
+                        </span>
+
+                        <h2>
+                            Plan your journey
+                        </h2>
+
+                    </div>
+
+
+                    <div class="ai-status">
+
+                        <span></span>
+
+                        Ready
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CHAT MESSAGES -->
+
+                <div
+                    id="chatMessages"
+                    class="chat-messages"
+                >
+
+
+                    <!-- INITIAL AI MESSAGE -->
+
+                    <div class="chat-message ai">
+
+                        <div class="chat-message-content">
+
+                            <strong>RideMate AI</strong>
+
+                            <div style="margin-top:6px;">
+                                Tell me about the ride you have in mind.
+                                You can mention your starting city,
+                                destination, number of days, budget and
+                                places you want to experience.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUICK PROMPTS -->
+
+                    <div class="quick-prompts">
+
+                        <button
+                            type="button"
+                            class="quick-prompt"
+                            data-prompt="Plan a 5 day motorcycle trip from Mumbai to Goa under ₹20,000 with beaches and waterfalls."
+                        >
+                            Mumbai → Goa
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="quick-prompt"
+                            data-prompt="Plan a 7 day Ladakh motorcycle trip with mountains, viewpoints and adventure places."
+                        >
+                            Ladakh Adventure
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="quick-prompt"
+                            data-prompt="Plan a 4 day Kerala motorcycle trip with beaches, food and scenic roads."
+                        >
+                            Kerala Ride
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="quick-prompt"
+                            data-prompt="Plan a budget friendly 3 day motorcycle trip from Mumbai."
+                        >
+                            Weekend Ride
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- INPUT -->
+
+                <div class="ai-input-area">
+
+                    <textarea
+                        id="aiInput"
+                        rows="3"
+                        placeholder="Ask RideMate anything... e.g. Plan an 8-day Mumbai to Goa ride under ₹35,000 with beaches and waterfalls"
+                    ></textarea>
+
+
+                    <div class="input-bottom">
+
+                        <span class="input-hint">
+                            RideMate AI will create a trip plan
+                        </span>
+
+
+                        <button
+                            id="sendAiButton"
+                            type="button"
+                            class="send-ai-btn"
+                        >
+
+                            Generate Ride
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 GENERATED PLAN
+                 ================================================= -->
+
+            <div
+                id="aiResult"
+                class="ai-result-panel"
+            >
+
+
+                <div class="result-empty">
+
+                    <div class="empty-icon">
+                        ✦
+                    </div>
+
+
+                    <h3>
+                        Your ride plan will appear here
+                    </h3>
+
+
+                    <p>
+                        Describe your journey and RideMate AI
+                        will turn it into a structured motorcycle
+                        trip.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             HOW IT WORKS
+             ================================================= -->
+
+        <section class="ai-how-section">
+
+
+            <div class="section-title">
+
+                <span>
+                    HOW IT WORKS
+                </span>
+
+                <h2>
+                    From idea to itinerary.
+                </h2>
+
+            </div>
+
+
+            <div class="how-grid">
+
+
+                <div class="how-card">
+
+                    <div class="how-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Tell RideMate
+                    </h3>
+
+                    <p>
+                        Describe where you want to go,
+                        how long you have and what you
+                        want to experience.
+                    </p>
+
+                </div>
+
+
+                <div class="how-card">
+
+                    <div class="how-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Build the route
+                    </h3>
+
+                    <p>
+                        RideMate converts your requirements
+                        into a practical motorcycle journey.
+                    </p>
+
+                </div>
+
+
+                <div class="how-card">
+
+                    <div class="how-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Ride your plan
+                    </h3>
+
+                    <p>
+                        Review the itinerary, budget and
+                        places before turning it into your ride.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CTA
+             ================================================= -->
+
+        <section class="ai-bottom-cta">
+
+            <div>
+
+                <span>
+                    READY TO RIDE?
+                </span>
+
+                <h2>
+                    Build the journey yourself.
+                </h2>
+
+                <p>
+                    Use the full RideMate planner when you
+                    already know where you want to go.
+                </p>
+
+            </div>
+
+
+            <a
+                href="planner.html"
+                class="ai-cta-btn"
+            >
+                Open Trip Planner
+                <strong>→</strong>
+            </a>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="ai-footer">
+
+        <div class="footer-logo">
+            RIDE<span>MATE</span>
+        </div>
+
+
+        <p>
+            Plan better. Ride farther.
+        </p>
+
+
+        <span>
+            © 2026 RideMate
+        </span>
+
+    </footer>
+
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script src="./js/ai.js?v=2"></script>
+<script src="./js/app.js"></script>
+</body>
+
+</html>

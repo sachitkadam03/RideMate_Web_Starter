@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Ride — RideMate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/trip.css">
+</head>
+
+<body>
+
+    <!-- =================================================
+         NAVBAR
+         ================================================= -->
+
+    <header class="trip-nav">
+
+        <a href="index.html" class="brand">
+
+            <span class="brand-mark">R</span>
+
+            <span>
+                RIDE<span>MATE</span>
+            </span>
+
+        </a>
+
+
+        <div class="nav-title">
+            YOUR RIDE
+        </div>
+
+
+        <div class="nav-actions">
+
+            <button
+                id="shareTrip"
+                class="nav-btn"
+            >
+                ↗ Share
+            </button>
+
+            <a
+                href="planner.html"
+                class="new-trip"
+            >
+                + New Ride
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         MAIN
+         ================================================= -->
+
+    <main class="trip-container">
+
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
+        <section class="trip-hero">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    RIDEMATE GENERATED JOURNEY
+                </span>
+
+
+                <h1 id="tripTitle">
+                    Your next adventure
+                </h1>
+
+
+                <div class="route-heading">
+
+                    <div class="location">
+                        <span class="dot start-dot"></span>
+
+                        <div>
+                            <small>FROM</small>
+                            <strong id="tripStart">
+                                —
+                            </strong>
+                        </div>
+                    </div>
+
+
+                    <div class="route-arrow">
+                        →
+                    </div>
+
+
+                    <div class="location">
+                        <span class="dot end-dot"></span>
+
+                        <div>
+                            <small>TO</small>
+                            <strong id="tripDestination">
+                                —
+                            </strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-route">
+
+                <div class="route-grid"></div>
+
+                <div class="route-line"></div>
+
+                <div class="map-point map-start">
+                    <span></span>
+                </div>
+
+                <div class="map-point map-end">
+                    <span></span>
+                </div>
+
+                <div class="map-label start-label">
+                    START
+                </div>
+
+                <div class="map-label end-label">
+                    DESTINATION
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             QUICK STATS
+             ================================================= -->
+
+        <section class="quick-stats">
+
+            <div class="stat-card">
+
+                <span class="stat-icon">◷</span>
+
+                <div>
+                    <small>TRAVEL DATE</small>
+
+                    <strong id="tripDate">
+                        —
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-icon">◫</span>
+
+                <div>
+                    <small>DURATION</small>
+
+                    <strong>
+                        <span id="tripDays">—</span> Days
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-icon">♟</span>
+
+                <div>
+                    <small>RIDERS</small>
+
+                    <strong>
+                        <span id="tripRiders">—</span> Riders
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card budget-stat">
+
+                <span class="stat-icon">₹</span>
+
+                <div>
+                    <small>TRIP BUDGET</small>
+
+                    <strong>
+                        ₹<span id="tripBudget">—</span>
+                    </strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONTENT GRID
+             ================================================= -->
+
+        <section class="trip-grid">
+
+
+            <!-- =================================================
+                 LEFT COLUMN
+                 ================================================= -->
+
+            <div class="main-column">
+
+
+                <!-- ITINERARY -->
+
+                <section class="panel itinerary-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-kicker">
+                                YOUR JOURNEY
+                            </span>
+
+                            <h2>
+                                Suggested Itinerary
+                            </h2>
+
+                        </div>
+
+                        <span class="ai-badge">
+                            ✦ AI PLANNED
+                        </span>
+
+                    </div>
+
+
+                    <div id="itinerary">
+
+                        <!-- JavaScript will generate days here -->
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- PLACES -->
+
+                <section class="panel places-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-kicker">
+                                DISCOVER
+                            </span>
+
+                            <h2>
+                                Places For Your Ride
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="placesList" class="places-grid">
+
+                        <!-- JavaScript -->
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RIGHT COLUMN
+                 ================================================= -->
+
+            <aside class="side-column">
+
+
+                <!-- BIKE -->
+
+                <section class="panel bike-panel">
+
+                    <span class="panel-kicker">
+                        YOUR MACHINE
+                    </span>
+
+                    <h3 id="bikeName">
+                        —
+                    </h3>
+
+                    <div class="bike-visual">
+
+                        <div class="bike-ring">
+                            RIDE
+                        </div>
+
+                        <div class="bike-road"></div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- BUDGET -->
+
+                <section class="panel budget-panel">
+
+                    <div class="panel-header compact">
+
+                        <div>
+
+                            <span class="panel-kicker">
+                                MONEY PLAN
+                            </span>
+
+                            <h3>
+                                Budget Overview
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="budget-total">
+
+                        <small>
+                            YOUR BUDGET
+                        </small>
+
+                        <strong>
+                            ₹<span id="budgetTotal">—</span>
+                        </strong>
+
+                    </div>
+
+
+                    <div class="budget-bars">
+
+                        <div class="budget-row">
+
+                            <div>
+                                <span>Fuel</span>
+                                <strong id="fuelAmount">₹—</strong>
+                            </div>
+
+                            <div class="bar">
+                                <span style="width: 35%"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="budget-row">
+
+                            <div>
+                                <span>Stay</span>
+                                <strong id="stayAmount">₹—</strong>
+                            </div>
+
+                            <div class="bar">
+                                <span style="width: 30%"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="budget-row">
+
+                            <div>
+                                <span>Food</span>
+                                <strong id="foodAmount">₹—</strong>
+                            </div>
+
+                            <div class="bar">
+                                <span style="width: 20%"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="budget-row">
+
+                            <div>
+                                <span>Activities</span>
+                                <strong id="activityAmount">₹—</strong>
+                            </div>
+
+                            <div class="bar">
+                                <span style="width: 15%"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- PREFERENCES -->
+
+                <section class="panel preferences-panel">
+
+                    <span class="panel-kicker">
+                        YOUR INTERESTS
+                    </span>
+
+                    <div
+                        id="preferences"
+                        class="preference-list"
+                    >
+                        <!-- JavaScript -->
+                    </div>
+
+                </section>
+
+
+
+                <!-- SPECIFIC PLACES -->
+
+                <section class="panel requested-panel">
+
+                    <span class="panel-kicker">
+                        REQUESTED PLACES
+                    </span>
+
+                    <div id="requestedPlaces">
+
+                        <span class="empty-request">
+                            No specific places added.
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- ACTION -->
+
+                <button
+                    id="editTrip"
+                    class="edit-trip-btn"
+                >
+                    EDIT THIS RIDE
+                    <span>→</span>
+                </button>
+
+
+                <button
+                    id="deleteTrip"
+                    class="delete-trip-btn"
+                >
+                    Delete saved ride
+                </button>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =================================================
+         JAVASCRIPT
+         ================================================= -->
+
+    <script src="js/trip.js"></script>
+<script src="./js/app.js"></script>
+</body>
+
+</html>

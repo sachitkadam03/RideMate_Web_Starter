@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | RideMate</title>
+
+    <link rel="stylesheet" href="./css/auth.css?v=3">
+</head>
+
+<body>
+
+<div class="auth-page">
+
+    <!-- LEFT SIDE -->
+    <section class="auth-visual">
+
+        <a href="index.html" class="auth-logo">
+            RIDE<span>MATE</span>
+        </a>
+
+        <div class="auth-visual-content">
+
+            <div class="auth-eyebrow">
+                WELCOME BACK, RIDER
+            </div>
+
+            <h1>
+                Your next<br>
+                <span>ride starts here.</span>
+            </h1>
+
+            <p>
+                Continue your journey with smarter routes,
+                better budgets and roads worth remembering.
+            </p>
+
+            <div class="auth-route">
+
+                <div class="route-line"></div>
+
+                <div class="route-point route-start">
+                    <span></span>
+                    <div>
+                        <strong>MUMBAI</strong>
+                        <small>START</small>
+                    </div>
+                </div>
+
+                <div class="route-point route-end">
+                    <span></span>
+                    <div>
+                        <strong>YOUR NEXT RIDE</strong>
+                        <small>DESTINATION</small>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="auth-quote">
+                <span>“</span>
+                The road is waiting.
+            </div>
+
+        </div>
+
+        <div class="auth-visual-footer">
+            <span>RIDEMATE</span>
+            <span>PLAN · RIDE · DISCOVER</span>
+        </div>
+
+    </section>
+
+
+    <!-- RIGHT SIDE -->
+    <section class="auth-form-section">
+
+        <div class="auth-form-container">
+
+            <div class="mobile-logo">
+                RIDE<span>MATE</span>
+            </div>
+
+            <div class="form-heading">
+
+                <div class="form-eyebrow">
+                    RIDEMATE ACCOUNT
+                </div>
+
+                <h2>Login</h2>
+
+                <p>
+                    Welcome back. Let's get you back on the road.
+                </p>
+
+            </div>
+
+
+            <form id="loginForm" novalidate>
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <label for="loginEmail">
+                        EMAIL ADDRESS
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            @
+                        </span>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                        >
+
+                    </div>
+
+                    <div
+                        class="field-error"
+                        id="loginEmailError">
+                    </div>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+
+                    <label for="loginPassword">
+                        PASSWORD
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            •
+                        </span>
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-target="loginPassword">
+                            SHOW
+                        </button>
+
+                    </div>
+
+                    <div
+                        class="field-error"
+                        id="loginPasswordError">
+                    </div>
+
+                </div>
+
+
+                <!-- OPTIONS -->
+                <div class="login-options">
+
+                    <label class="remember-me">
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe">
+
+                        <span class="remember-box"></span>
+
+                        Remember me
+
+                    </label>
+
+                    <a
+                        href="#"
+                        id="forgotPassword">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <!-- LOGIN BUTTON -->
+                <button
+                    type="submit"
+                    class="auth-submit"
+                    id="loginButton">
+
+                    <span>LOGIN TO RIDEMATE</span>
+
+                    <span class="submit-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+                <!-- REGISTER -->
+                <div class="auth-switch">
+
+                    <span>
+                        Don't have an account?
+                    </span>
+
+                    <a href="register.html">
+                        Create one
+                    </a>
+
+                </div>
+
+            </form>
+
+
+            <div class="auth-security">
+
+                <span class="security-dot"></span>
+
+                Your account data stays on this device
+                during this prototype.
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script src="./js/auth.js?v=3"></script>
+
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Create Account | RideMate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/auth.css?v=2"
+    >
+</head>
+
+<body>
+
+<div class="auth-page">
+
+    <!-- LEFT SIDE -->
+
+    <section class="auth-visual">
+
+        <a
+            href="index.html"
+            class="auth-logo"
+        >
+            RIDE<span>MATE</span>
+        </a>
+
+
+        <div class="auth-visual-content">
+
+            <span class="auth-eyebrow">
+                JOIN THE JOURNEY
+            </span>
+
+            <h1>
+                Your next
+                <span>adventure</span>
+                starts here.
+            </h1>
+
+            <p>
+                Create your RideMate account and start planning
+                motorcycle journeys across India.
+            </p>
+
+
+            <div class="auth-route">
+
+                <div class="route-point">
+                    <span></span>
+                    <div>
+                        <strong>
+                            MUMBAI
+                        </strong>
+                        <small>
+                            YOUR START
+                        </small>
+                    </div>
+                </div>
+
+                <div class="route-line"></div>
+
+                <div class="route-point">
+                    <span></span>
+                    <div>
+                        <strong>
+                            ANYWHERE
+                        </strong>
+                        <small>
+                            YOUR ROAD
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="auth-visual-footer">
+            <span>
+                PLAN
+            </span>
+
+            <span>
+                RIDE
+            </span>
+
+            <span>
+                EXPLORE
+            </span>
+
+            <span>
+                REPEAT
+            </span>
+        </div>
+
+    </section>
+
+
+    <!-- RIGHT SIDE -->
+
+    <section class="auth-form-section">
+
+        <div class="auth-form-container">
+
+            <div class="auth-mobile-logo">
+                RIDE<span>MATE</span>
+            </div>
+
+
+            <div class="auth-heading">
+
+                <span>
+                    CREATE YOUR ACCOUNT
+                </span>
+
+                <h2>
+                    Welcome to
+                    <strong>RideMate.</strong>
+                </h2>
+
+                <p>
+                    Set up your rider profile in less than a minute.
+                </p>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <form
+                id="registerForm"
+                class="auth-form"
+                novalidate
+            >
+
+                <!-- NAME -->
+
+                <div class="auth-field">
+
+                    <label for="registerName">
+                        FULL NAME
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        name="name"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                    >
+
+                    <small
+                        class="field-error"
+                        id="nameError"
+                    ></small>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="auth-field">
+
+                    <label for="registerEmail">
+                        EMAIL ADDRESS
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        name="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                    >
+
+                    <small
+                        class="field-error"
+                        id="emailError"
+                    ></small>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="auth-field">
+
+                    <label for="registerPhone">
+                        PHONE NUMBER
+                        <span>OPTIONAL</span>
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="registerPhone"
+                        name="phone"
+                        placeholder="+91 XXXXX XXXXX"
+                        autocomplete="tel"
+                    >
+
+                    <small
+                        class="field-error"
+                        id="phoneError"
+                    ></small>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="auth-field">
+
+                    <label for="registerPassword">
+                        PASSWORD
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            name="password"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-target="registerPassword"
+                            aria-label="Show password"
+                        >
+                            SHOW
+                        </button>
+
+                    </div>
+
+                    <small
+                        class="field-error"
+                        id="passwordError"
+                    ></small>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="auth-field">
+
+                    <label for="confirmPassword">
+                        CONFIRM PASSWORD
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-target="confirmPassword"
+                            aria-label="Show password"
+                        >
+                            SHOW
+                        </button>
+
+                    </div>
+
+                    <small
+                        class="field-error"
+                        id="confirmPasswordError"
+                    ></small>
+
+                </div>
+
+
+                <!-- TERMS -->
+
+                <label class="auth-checkbox">
+
+                    <input
+                        type="checkbox"
+                        id="termsCheckbox"
+                    >
+
+                    <span class="custom-checkbox"></span>
+
+                    <span class="checkbox-text">
+                        I agree to the RideMate
+                        <a href="#" onclick="return false;">
+                            Terms of Use
+                        </a>
+                        and
+                        <a href="#" onclick="return false;">
+                            Privacy Policy
+                        </a>.
+                    </span>
+
+                </label>
+
+                <small
+                    class="field-error"
+                    id="termsError"
+                ></small>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="auth-submit"
+                    id="registerButton"
+                >
+                    <span>
+                        CREATE ACCOUNT
+                    </span>
+
+                    <strong>
+                        →
+                    </strong>
+                </button>
+
+
+                <!-- LOGIN -->
+
+                <div class="auth-switch">
+
+                    <span>
+                        Already have an account?
+                    </span>
+
+                    <a href="login.html">
+                        Log in
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script src="./js/auth.js?v=2"></script>
+
+</body>
+</html>

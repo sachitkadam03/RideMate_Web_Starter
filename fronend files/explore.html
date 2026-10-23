@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Explore India — RideMate</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Global Navbar -->
+    <link rel="stylesheet" href="./css/navbar.css">
+
+    <!-- Explore -->
+    <link rel="stylesheet" href="./css/explore.css?v=10">
+
+</head>
+
+
+<body>
+
+<div class="explore-page">
+
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <header class="site-nav">
+
+        <a href="dashboard.html"
+           class="site-logo">
+
+            <span class="site-logo-mark">
+                R
+            </span>
+
+            <span class="site-logo-text">
+                RIDE<span>MATE</span>
+            </span>
+
+        </a>
+
+
+        <nav class="site-nav-links">
+
+            <a href="dashboard.html"
+               data-nav="home">
+                Home
+            </a>
+
+            <a href="explore.html"
+               data-nav="explore">
+                Explore
+            </a>
+
+            <a href="planner.html"
+               data-nav="planner">
+                Plan a Ride
+            </a>
+
+            <a href="ai.html"
+               data-nav="ai">
+                RideMate AI
+            </a>
+
+            <a href="trip.html"
+               data-nav="trip">
+                My Ride
+            </a>
+
+            <a href="profile.html"
+               data-nav="profile">
+                Profile
+            </a>
+
+        </nav>
+
+
+        <a href="planner.html"
+           class="site-plan-button">
+
+            Plan a Ride
+            <span>→</span>
+
+        </a>
+
+
+        <button
+            class="site-menu-button"
+            id="siteMenuButton"
+            type="button"
+            aria-label="Open navigation">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
+        <section class="explore-hero">
+
+            <div class="hero-left">
+
+                <span class="explore-eyebrow">
+                    EXPLORE INDIA
+                </span>
+
+                <h1>
+                    Find your next
+                    <span>great ride.</span>
+                </h1>
+
+                <p>
+                    Discover India's mountain roads, coastal
+                    highways, waterfalls, culture and hidden
+                    places built for two wheels.
+                </p>
+
+
+                <!-- SEARCH -->
+
+                <div class="explore-search">
+
+                    <span class="search-icon">
+                        ⌕
+                    </span>
+
+                    <input
+                        type="text"
+                        id="destinationSearch"
+                        placeholder="Search destination, place or route..."
+                        autocomplete="off">
+
+                    <button
+                        id="searchButton"
+                        type="button">
+
+                        Search
+
+                    </button>
+
+                </div>
+
+
+                <!-- QUICK SEARCH -->
+
+                <div class="quick-search">
+
+                    <span>Popular:</span>
+
+                    <button type="button"
+                            data-quick="Ladakh">
+                        Ladakh
+                    </button>
+
+                    <button type="button"
+                            data-quick="Goa">
+                        Goa
+                    </button>
+
+                    <button type="button"
+                            data-quick="Manali">
+                        Manali
+                    </button>
+
+                    <button type="button"
+                            data-quick="Kerala">
+                        Kerala
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HERO ROUTE VISUAL -->
+
+            <div class="hero-route">
+
+                <div class="route-grid"></div>
+
+                <div class="route-orbit orbit-one"></div>
+                <div class="route-orbit orbit-two"></div>
+
+                <div class="route-line route-line-one"></div>
+                <div class="route-line route-line-two"></div>
+
+                <div class="route-point point-one">
+                    <span></span>
+                    <label>LADAKH</label>
+                </div>
+
+                <div class="route-point point-two">
+                    <span></span>
+                    <label>GOA</label>
+                </div>
+
+                <div class="route-point point-three">
+                    <span></span>
+                    <label>KERALA</label>
+                </div>
+
+
+                <div class="route-card">
+
+                    <div class="route-card-top">
+
+                        <span>
+                            INDIA RIDES
+                        </span>
+
+                        <strong>
+                            LIVE
+                        </strong>
+
+                    </div>
+
+                    <div class="route-card-line"></div>
+
+                    <div class="route-stat">
+                        <span>Routes</span>
+                        <strong>∞</strong>
+                    </div>
+
+                    <div class="route-stat">
+                        <span>Destinations</span>
+                        <strong>08</strong>
+                    </div>
+
+                    <div class="route-stat">
+                        <span>Coverage</span>
+                        <strong>INDIA</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RIDE TYPES
+             ================================================= -->
+
+        <section class="ride-types">
+
+            <div class="section-top">
+
+                <div>
+
+                    <span class="explore-eyebrow">
+                        FIND YOUR EXPERIENCE
+                    </span>
+
+                    <h2>
+                        What are you looking for?
+                    </h2>
+
+                </div>
+
+                <p>
+                    Choose a riding style and discover places
+                    that match it.
+                </p>
+
+            </div>
+
+
+            <div class="category-bar">
+
+                <button
+                    class="category-btn active"
+                    data-category="all"
+                    type="button">
+
+                    All
+
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="mountains"
+                    type="button">
+
+                    Mountains
+
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="beaches"
+                    type="button">
+
+                    Beaches
+
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="waterfalls"
+                    type="button">
+
+                    Waterfalls
+
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="adventure"
+                    type="button">
+
+                    Adventure
+
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="culture"
+                    type="button">
+
+                    Culture
+
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="food"
+                    type="button">
+
+                    Food
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FEATURED DESTINATIONS
+             ================================================= -->
+
+        <section class="destinations-section">
+
+            <div class="section-top destinations-heading">
+
+                <div>
+
+                    <span class="explore-eyebrow">
+                        RIDEMATE PICKS
+                    </span>
+
+                    <h2>
+                        Destinations worth the ride.
+                    </h2>
+
+                </div>
+
+                <span id="resultCount"
+                      class="result-count">
+
+                    <strong>8</strong>
+                    destinations found
+
+                </span>
+
+            </div>
+
+
+            <div
+                id="destinationGrid"
+                class="destination-grid">
+
+
+                <!-- LADAKH -->
+
+                <article
+                    class="destination-card destination-featured"
+                    data-category="mountains adventure"
+                    data-name="Ladakh">
+
+                    <div class="destination-image scene-ladakh"></div>
+
+                    <div class="destination-overlay"></div>
+
+                    <div class="destination-content">
+
+                        <div class="destination-meta">
+
+                            <span>
+                                HIGH ALTITUDE
+                            </span>
+
+                            <span>
+                                4,500m+
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Ladakh
+                        </h3>
+
+                        <p>
+                            The ultimate Himalayan motorcycle journey
+                            through some of India's most dramatic roads.
+                        </p>
+
+                        <div class="destination-bottom">
+
+                            <span>
+                                Himalayan roads
+                            </span>
+
+                            <a
+                                href="planner.html?destination=Ladakh"
+                                class="plan-link">
+
+                                Plan this ride
+                                <span>→</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- GOA -->
+
+                <article
+                    class="destination-card"
+                    data-category="beaches food adventure"
+                    data-name="Goa">
+
+                    <div class="destination-image scene-goa"></div>
+
+                    <div class="destination-overlay"></div>
+
+                    <div class="destination-content">
+
+                        <div class="destination-meta">
+
+                            <span>COASTAL</span>
+                            <span>BEACHES</span>
+
+                        </div>
+
+                        <h3>Goa</h3>
+
+                        <p>
+                            Coastal roads, beaches and unforgettable
+                            sunsets.
+                        </p>
+
+                        <div class="destination-bottom">
+
+                            <span>Coastal ride</span>
+
+                            <a
+                                href="planner.html?destination=Goa"
+                                class="plan-link">
+
+                                Plan this ride
+                                <span>→</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- MANALI -->
+
+                <article
+                    class="destination-card"
+                    data-category="mountains adventure"
+                    data-name="Manali">
+
+                    <div class="destination-image scene-manali"></div>
+
+                    <div class="destination-overlay"></div>
+
+                    <div class="destination-content">
+
+                        <div class="destination-meta">
+
+                            <span>HIMALAYAS</span>
+                            <span>MOUNTAIN</span>
+
+                        </div>
+
+                        <h3>Manali</h3>
+
+                        <p>
+                            Mountain passes and dramatic Himalayan
+                            scenery.
+                        </p>
+
+                        <div class="destination-bottom">
+
+                            <span>Adventure</span>
+
+                            <a
+                                href="planner.html?destination=Manali"
+                                class="plan-link">
+
+                                Plan this ride
+                                <span>→</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- KERALA -->
+
+                <article
+                    class="destination-card"
+                    data-category="beaches food culture"
+                    data-name="Kerala">
+
+                    <div class="destination-image scene-kerala"></div>
+
+                    <div class="destination-overlay"></div>
+
+                    <div class="destination-content">
+
+                        <div class="destination-meta">
+
+                            <span>SOUTH INDIA</span>
+                            <span>COAST</span>
+
+                        </div>
+
+                        <h3>Kerala</h3>
+
+                        <p>
+                            Green landscapes, coastal roads and
+                            local culture.
+                        </p>
+
+                        <div class="destination-bottom">
+
+                            <span>Culture</span>
+
+                            <a
+                                href="planner.html?destination=Kerala"
+                                class="plan-link">
+
+                                Plan this ride
+                                <span>→</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- MEGHALAYA -->
+
+                <article
+                    class="destination-card"
+                    data-category="waterfalls mountains adventure"
+                    data-name="Meghalaya">
+
+                    <div class="destination-image scene-meghalaya"></div>
+
+                    <div class="destination-overlay"></div>
+
+                    <div class="destination-content">
+
+                        <div class="destination-meta">
+
+                            <span>NORTHEAST</span>
+                            <span>SCENIC</span>
+
+                        </div>
+
+                        <h3>Meghalaya</h3>
+
+                        <p>
+                            Rainforest roads, waterfalls and remote
+                            landscapes.
+                        </p>
+
+                        <div class="destination-bottom">
+
+                            <span>Waterfalls</span>
+
+                            <a
+                                href="planner.html?destination=Meghalaya"
+                                class="plan-link">
+
+                                Plan this ride
+                                <span>→</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- RAJASTHAN -->
+
+                <article
+                    class="destination-card"
+                    data-category="culture adventure food"
+                    data-name="Rajasthan">
+
+                    <div class="destination-image scene-rajasthan"></div>
+
+                    <div class="destination-overlay"></div>
+
+                    <div class="destination-content">
+
+                        <div class="destination-meta">
+
+                            <span>DESERT ROADS</span>
+                            <span>HERITAGE</span>
+
+                        </div>
+
+                        <h3>Rajasthan</h3>
+
+                        <p>
+                            Forts, desert highways and historic cities.
+                        </p>
+
+                        <div class="destination-bottom">
+
+                            <span>Desert</span>
+
+                            <a
+                                href="planner.html?destination=Rajasthan"
+                                class="plan-link">
+
+                                Plan this ride
+                                <span>→</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- SIKKIM -->
+
+                <article
+                    class="destination-card"
+                    data-category="mountains adventure culture"
+                    data-name="Sikkim">
+
+                    <div class="destination-image scene-sikkim"></div>
+
+                    <div class="destination-overlay"></div>
+
+                    <div class="destination-content">
+
+                        <div class="destination-meta">
+
+                            <span>HIMALAYAN</span>
+                            <span>SCENIC</span>
+
+                        </div>
+
+                        <h3>Sikkim</h3>
+
+                        <p>
+                            Winding mountain roads and incredible
+                            viewpoints.
+                        </p>
+
+                        <div class="destination-bottom">
+
+                            <span>Mountain ride</span>
+
+                            <a
+                                href="planner.html?destination=Sikkim"
+                                class="plan-link">
+
+                                Plan this ride
+                                <span>→</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- KONKAN -->
+
+                <article
+                    class="destination-card"
+                    data-category="beaches food waterfalls"
+                    data-name="Konkan">
+
+                    <div class="destination-image scene-konkan"></div>
+
+                    <div class="destination-overlay"></div>
+
+                    <div class="destination-content">
+
+                        <div class="destination-meta">
+
+                            <span>WEST COAST</span>
+                            <span>COASTAL</span>
+
+                        </div>
+
+                        <h3>Konkan</h3>
+
+                        <p>
+                            Coastal highways, hidden beaches and
+                            local food.
+                        </p>
+
+                        <div class="destination-bottom">
+
+                            <span>Coastal roads</span>
+
+                            <a
+                                href="planner.html?destination=Konkan"
+                                class="plan-link">
+
+                                Plan this ride
+                                <span>→</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- NO RESULTS -->
+
+            <div
+                id="noResults"
+                class="no-results">
+
+                <div class="no-results-icon">
+                    ⌕
+                </div>
+
+                <h3>
+                    No destination found
+                </h3>
+
+                <p>
+                    Try another destination or category.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CTA
+             ================================================= -->
+
+        <section class="explore-cta">
+
+            <div>
+
+                <span class="explore-eyebrow">
+                    BUILD YOUR JOURNEY
+                </span>
+
+                <h2>
+                    Know the destination?
+                    <span>Let's plan the ride.</span>
+                </h2>
+
+                <p>
+                    Set your route, days, riders, budget and
+                    places you want to visit.
+                </p>
+
+                <a
+                    href="planner.html"
+                    class="cta-button">
+
+                    Plan My Ride
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+
+            <div class="cta-route">
+
+                <div class="cta-route-line"></div>
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="explore-footer">
+
+        <div class="footer-brand">
+            RIDE<span>MATE</span>
+        </div>
+
+        <p>
+            Plan better. Ride farther.
+        </p>
+
+    </footer>
+
+
+</div>
+
+
+<script src="./js/explore.js?v=10"></script>
+<script src="./js/app.js"></script>
+
+</body>
+
+</html>
